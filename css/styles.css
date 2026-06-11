@@ -28,9 +28,9 @@ body {
 
 /* Логотип в шапке — общий контейнер */
 .logo {
-   overflow: hidden;
-    max-height: 120px;          
-    transition: max-height 0.3s ease, opacity 0.3s ease, margin 0.3s ease, padding 0.3s ease;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease-out;
 }
 
 .logo-link {
@@ -65,11 +65,9 @@ body {
 }
 
 .logo.hide-on-scroll {
-   max-height: 0;
-    opacity: 0;
-    margin: 0;
-    padding: 0;
-    pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
 }
 
 /* Логотип в подвале */
@@ -529,27 +527,8 @@ footer p {
 
 /* Планшеты и маленькие ноутбуки (до 768px) */
 @media (max-width: 768px) {
-    body {
-        padding-top: var(--header-height, 120px);
-    }
     .container {
         padding: 0 20px;
-    }
-
-    .logo {
-        justify-content: center;
-    }
-
-    .logo-img {
-        height: 70px;
-    }
-
-    .logo-main {
-        font-size: 1.4rem;
-    }
-
-    .logo-sub {
-        font-size: 0.7rem;
     }
 
     nav ul {
@@ -667,14 +646,7 @@ footer p {
     .footer-logo {
         height: 70px;
     } 
-     header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 100;
-        background: rgba(255, 255, 255, 0.95); /* немного прозрачности, если нужно */
-    }
+    
     header.shrink {
         padding: 2px 0;
         transition: padding 0.2s ease;
@@ -807,12 +779,7 @@ footer p {
         margin: 0px ;
     }
 
-    header {
-        position: fixed;
-    }
-    body {
-        padding-top: var(--header-height, 100px);
-    }
+    
 
 
 }
