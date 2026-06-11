@@ -31,6 +31,9 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
+    overflow: hidden;
+    max-height: 120px;          
+    transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .logo-link {
@@ -654,6 +657,9 @@ footer p {
 
     .logo.hide-on-scroll {
         display: none;
+         max-height: 0;
+    opacity: 0;
+    visibility: hidden;
     }
    
     header.shrink {
