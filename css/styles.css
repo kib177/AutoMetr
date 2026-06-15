@@ -652,7 +652,7 @@ footer p {
 /* Смартфоны (до 480px) */
 @media (max-width: 480px) {
     .container {
-        padding: 0 7px;
+        padding: 0 10px;
     }
 
     .hero h1 {
@@ -695,11 +695,14 @@ footer p {
         gap: 5px;
     }
     nav a {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     .header-phone a {
-        font-size: 1.1rem;
+        font-size: 1rem;
+    }
+    .header-phone i {
+        font-size: 1rem;
     }
 
     .services {
