@@ -561,57 +561,72 @@ footer p {
     .container {
         padding: 0 20px;
     }
-    .logo {
-        padding: 0 50px;           
-        margin-bottom: 5px;
-        gap: 8px;
+
+    header .container {
+        flex-direction: column;      /* элементы друг под другом */
+        align-items: center;        /* всё по центру */
+        justify-content: center;
+        position: relative;
+        padding: 8px 0 6px;        /* небольшие поля сверху/снизу */
+        min-height: auto;           /* высота по контенту */
     }
+
+    /* Логотип – без выхода за края */
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 4px;        /* отступ до телефона */
+        max-width: 100%;           /* гарантия, что не вылезет */
+        box-sizing: border-box;
+        padding: 0 40px;           /* освобождаем место для бургера справа */
+    }
+
     .logo-img {
         height: 50px;
+        flex-shrink: 0;
     }
+
     .logo-main {
         font-size: 1.2rem;
     }
+
     .logo-sub {
         font-size: 0.65rem;
     }
 
-    nav ul {
-        justify-content: center;
-        gap: 15px;
-        flex-wrap: wrap;
+    /* Бургер – абсолютно справа, не мешает */
+    .burger-menu {
+        display: flex;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 120;
     }
 
-    nav a {
-        font-size: 1rem;
-        padding-bottom: 2px;
-    }
-
+    /* Телефон – под логотипом, по центру */
     .header-phone {
-         width: 100%;
+        width: 100%;
         text-align: center;
-        margin-top: 5px;
+        margin: 0;
+        padding: 0 40px;           /* отступы, чтобы не прилипал к бургеру */
+        box-sizing: border-box;
     }
 
     .header-phone a {
         font-size: 0.95rem;
         justify-content: center;
     }
-    .burger-menu {
-        display: flex;
-        position: absolute;
-        right: 15px;
-        top: 20px;                  
-        z-index: 120;
-    }
-     /* Скрываем обычную навигацию */
+
+    /* Меню – скрыто, раскрывается под шапкой */
     nav#main-nav {
         display: none;
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
-        background: rgba(255, 255, 255, 0.9);
+        background: rgba(255, 255, 255, 0.98);
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         padding: 20px 0;
     }
@@ -623,19 +638,28 @@ footer p {
     nav#main-nav ul {
         flex-direction: column;
         align-items: center;
-        gap: 0px;
-    }
-
-    nav#main-nav ul li {
-        width: 100%;
-        text-align: center;
+        gap: 15px;
     }
 
     nav#main-nav ul li a {
         display: block;
-        padding: 8px 0;
+        padding: 12px 0;
         font-size: 1.2rem;
         border-bottom: none;
+    }
+}
+
+    
+
+    nav ul {
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 1rem;
+        padding-bottom: 2px;
     }
 
     .hero {
@@ -733,15 +757,6 @@ footer p {
     .footer-logo {
         height: 70px;
     } 
-    
-    header .container {
-        lex-direction: column;      
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        padding: 10px 0 5px;
-        gap: 0;
-    }
 }
 
 /* Смартфоны (до 480px) */
