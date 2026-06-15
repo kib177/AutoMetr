@@ -31,26 +31,18 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
-}
-
-.logo-link {
     flex-shrink: 0;
 }
-
 .logo-img {
     height: 90px;
     width: auto;
     display: block;
-    transition: none;
 }
-
 .logo-text {
     display: flex;
     flex-direction: column;
-    text-align: center;           
     white-space: nowrap;
 }
-
 .logo-main {
     font-size: 1.6rem;
     font-weight: 700;
@@ -58,7 +50,6 @@ body {
     color: #34495e;
     line-height: 1.2;
 }
-
 .logo-sub {
     font-size: 0.8rem;
     font-weight: 400;
@@ -82,24 +73,24 @@ body {
 
 /* Шапка */
 header {
-    background: rgba(255, 255, 255, 0.9);
-    border-bottom: 2px solid #ecf0f1;
-    padding: 5px 0;
     position: sticky;
-    transition: none;        
-    min-height: 80px;          
     top: 0;
     z-index: 100;
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 2px solid #ecf0f1;
+    min-height: 80px;
+    padding: 5px 0;
     box-sizing: border-box;
-    backdrop-filter: blur(5px);
+    transition: none;
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 5px;
+    flex-wrap: nowrap;
+    gap: 20px;
+    position: relative;
 }
 
 nav ul {
@@ -109,6 +100,12 @@ nav ul {
     gap: 24px;
 }
 
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 24px;
+}
 nav a {
     text-decoration: none;
     color: #34495e;
@@ -118,14 +115,18 @@ nav a {
     padding-bottom: 4px;
     border-bottom: 2px solid transparent;
 }
-
 nav a:hover {
     color: #2980b9;
     border-bottom-color: #2980b9;
 }
 
 .header-phone {
-    margin-left: 10px;          
+    text-decoration: none;
+    color: #34495e;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
     white-space: nowrap;        
 }
 
@@ -145,8 +146,9 @@ nav a:hover {
 }
 
 .header-phone i {
-    color: #2980b9;             
-    font-size: 1.1rem;
+    color: #2980b9;
+    width: 18px;
+    text-align: center;
 }
 
 .burger-menu {
@@ -162,7 +164,6 @@ nav a:hover {
     padding: 5px;
     z-index: 110;
 }
-
 .burger-menu span {
     display: block;
     width: 25px;
@@ -172,8 +173,6 @@ nav a:hover {
     border-radius: 2px;
     transition: 0.3s;
 }
-
-/* Анимация бургера в крестик при открытии */
 .burger-menu.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -565,7 +564,7 @@ footer p {
     header .container {
         flex-direction: column;      /* элементы друг под другом */
         align-items: center;        /* всё по центру */
-        justify-content: center;
+        justify-content: space-between;
         position: relative;
         padding: 8px 0 6px;        /* небольшие поля сверху/снизу */
         min-height: auto;           /* высота по контенту */
@@ -648,9 +647,28 @@ footer p {
         border-bottom: none;
     }
 }
-
-    
-
+     .mobile-contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        border-top: 1px solid #ecf0f1;
+        padding-top: 20px;
+        margin: 0 30px;
+    }
+    .mobile-phone{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 1rem;
+        color: #2c3e50;
+        text-decoration: none;
+    }
+    .mobile-phone i {
+        color: #2980b9;
+        width: 20px;
+    }
+   
     nav ul {
         justify-content: center;
         gap: 15px;
