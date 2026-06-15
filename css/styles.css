@@ -562,6 +562,8 @@ footer p {
         padding: 0 20px;
     }
     .logo {
+        padding: 0 50px;           
+        margin-bottom: 5px;
         gap: 8px;
     }
     .logo-img {
@@ -586,35 +588,30 @@ footer p {
     }
 
     .header-phone {
-        position: absolute;
-        left: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-        white-space: nowrap;
-        z-index: 120;
-        margin: 0;
+         width: 100%;
+        text-align: center;
+        margin-top: 5px;
     }
 
     .header-phone a {
-        font-size: 0.95rem;        
-        gap: 4px;
+        font-size: 0.95rem;
+        justify-content: center;
     }
     .burger-menu {
         display: flex;
         position: absolute;
         right: 15px;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 20px;                  
         z-index: 120;
     }
      /* Скрываем обычную навигацию */
     nav#main-nav {
         display: none;
         position: absolute;
-        top: 80px;                        
+        top: 100%;
         left: 0;
         width: 100%;
-        background: rgba(255, 255, 255, 0.98);
+        background: rgba(255, 255, 255, 0.9);
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         padding: 20px 0;
     }
@@ -738,9 +735,12 @@ footer p {
     } 
     
     header .container {
-        justify-content: center;   
+        lex-direction: column;      
+        align-items: center;
+        justify-content: center;
         position: relative;
-        min-height: 70px;
+        padding: 10px 0 5px;
+        gap: 0;
     }
 }
 
