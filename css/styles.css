@@ -143,15 +143,6 @@ nav a:hover {
     font-size: 1.1rem;
 }
 
-header.shrink {
-    padding: 2px 0; 
-}
-
-header.shrink .logo-img {
-    height: 50px;            
-    transition: height 0.3s ease;
-}
-
 /* Главный баннер */
 .hero {
     background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1530046339160-ce3e530f7d2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
@@ -646,16 +637,6 @@ footer p {
         height: 70px;
     } 
     
-    header.shrink {
-        padding: 2px 0;
-        transition: padding 0.2s ease;
-    }
-    
-    header.shrink .container {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
- 
     header .container {
         flex-direction: column;
         text-align: center;
@@ -676,10 +657,7 @@ footer p {
     .hero p {
         font-size: 0.9rem;
     }
-    .logo.hide-on-scroll {
-        display: none;
-    }
-
+    
     .section-title {
         font-size: 1.5rem;
         margin: 5px 0 5px;
