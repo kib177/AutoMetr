@@ -28,13 +28,15 @@ body {
 
 /* Логотип в шапке — общий контейнер */
 .logo {
-    opacity: 1;
-    visibility: visible;
-    transition: all 0.3s ease-out;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
 }
 
 .logo-link {
     line-height: 0;
+    flex-shrink: 0;
 }
 
 .logo-img {
@@ -46,6 +48,7 @@ body {
 .logo-text {
     display: flex;
     flex-direction: column;
+    white-space: nowrap;
 }
 
 .logo-main {
@@ -83,9 +86,9 @@ header {
     border-bottom: 2px solid #ecf0f1;
     padding: 5px 0;
     position: sticky;
-    top: 0;
-    z-index: 100;
-    transition: padding 0.3s ease;
+    transition: none;        
+    min-height: 80px;          
+    
 }
 
 header .container {
@@ -667,14 +670,30 @@ footer p {
         width: 60px;
     }
 
-    nav a {
-        font-size: 1.1rem;
-    }
-
     nav ul {
         justify-content: center;
         gap: 10px;
         flex-wrap: wrap;
+    }
+
+    .logo {
+        gap: 8px;
+    }
+    .logo-img {
+        height: 50px;           
+    }
+    .logo-main {
+        font-size: 1.2rem;     
+    }
+    .logo-sub {
+        font-size: 0.6rem;
+    }
+    header .container {
+        flex-wrap: nowrap;    
+        gap: 10px;
+    }
+    nav a {
+        font-size: 0.9rem;
     }
 
     .header-phone a {
