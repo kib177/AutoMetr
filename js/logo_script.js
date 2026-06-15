@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
-    const logo = document.querySelector('.logo');
-    if (!header || !logo) return;
+    const header = document.querySelector('header');
+    if (!header) return;
 
     function isMobile() {
         return window.innerWidth <= 768;
@@ -15,11 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const shouldShrink = isMobile() && scrollY > 5;
 
         if (shouldShrink === lastShrink) return;
-        
+
         if (shouldShrink) {
-            logo.classList.add('hide-on-scroll');
+            header.classList.add('shrink');
         } else {
-            logo.classList.remove('hide-on-scroll');
+            header.classList.remove('shrink');
         }
         lastShrink = shouldShrink;
     }
@@ -34,8 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }, { passive: true });
 
-    window.addEventListener('resize', function() {
-        updateHeader();
-    });
-    updateHeader();
+    window.addEventListener('resize', updateHeader);
+    updateHeader(); // начальная проверка
 });
