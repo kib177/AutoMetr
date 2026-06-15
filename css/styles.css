@@ -586,17 +586,23 @@ footer p {
     }
 
     .header-phone {
-        margin-left: 0;
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        white-space: nowrap;
+        z-index: 120;
+        margin: 0;
     }
 
     .header-phone a {
-        font-size: 1rem;
-        justify-content: center;
+        font-size: 0.95rem;        
+        gap: 4px;
     }
     .burger-menu {
         display: flex;
         position: absolute;
-        right: 20px;
+        right: 15px;
         top: 50%;
         transform: translateY(-50%);
         z-index: 120;
@@ -630,7 +636,7 @@ footer p {
 
     nav#main-nav ul li a {
         display: block;
-        padding: 12px 0;
+        padding: 8px 0;
         font-size: 1.2rem;
         border-bottom: none;
     }
@@ -732,9 +738,9 @@ footer p {
     } 
     
     header .container {
-        justify-content: center;  
+        justify-content: center;   
         position: relative;
-        flex-wrap: nowrap;
+        min-height: 70px;
     }
 }
 
